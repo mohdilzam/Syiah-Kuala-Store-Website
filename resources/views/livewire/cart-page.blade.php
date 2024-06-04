@@ -41,7 +41,7 @@
               </tr>
               @empty
                <tr>
-                <td colspan="5" class="text-center py-4 text-4xl font-semibold text-slate-500">oops.. your cart is empty</td>
+                <td colspan="5" class="text-center py-4 text-4xl font-semibold text-slate-500">Oops.. your cart is empty</td>
                </tr>
               @endforelse
             </tbody>
@@ -64,7 +64,7 @@
             <span class="font-semibold">Total</span>
             <span class="font-semibold">{{ Number::currency($total_bayar, 'IDR') }}</span>
           </div>
-          @if ($cart_items)   
+          @if ($cart_items)
             <a href="/checkout" class="bg-[#03AED2] block text-center text-white py-2 px-4 rounded-lg mt-4 w-full hover:bg-[#68D2E8]">Checkout</a>
           @endif
         </div>
