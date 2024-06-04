@@ -5,6 +5,7 @@ Anggota Kelompok:
 2. Cut Mardila Agustine (2208107010083)
 
 Deskripsi Proyek
+
 SKS (Syiah Kuala Store) adalah sebuah aplikasi e-commerce yang dibangun menggunakan berbagai teknologi modern untuk menyediakan pengalaman belanja online yang lancar dan efisien. Proyek ini menggunakan Laravel sebagai framework utama, Livewire untuk interaktivitas tanpa perlu memuat ulang halaman, Filament untuk admin panel yang mudah digunakan, dan Tailwind CSS untuk gaya yang konsisten dan responsif.
 
 Fitur Utama :
