@@ -9,7 +9,7 @@
           <p class="mt-3 text-lg text-white">Purchase your best USK’s Product here!</p>
           <!-- Buttons -->
           <div class="mt-7 grid gap-3 w-full sm:inline-flex">
-            <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#FDDE55] text-gray-800 hover:bg-[#FEEFAD] disabled:opacity-50 disabled:pointer-events-none" href="/register">
+            <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#FDDE55] text-gray-800 hover:bg-[#FEEFAD] disabled:opacity-50 disabled:pointer-events-none" href="/login">
               SHOP NOW
               <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m9 18 6-6-6-6" />
