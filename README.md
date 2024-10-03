@@ -2,7 +2,7 @@ SKS (Syiah Kuala Store)
 
 Anggota Kelompok:
 1. Muhammad Ilzam (2208107010087)
-2. Cut Mardila Agustine (2208107010083)
+2. Dinda Maharani (2208107010081)
 
 Deskripsi Proyek
 
