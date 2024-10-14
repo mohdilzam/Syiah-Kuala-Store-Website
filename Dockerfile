@@ -4,7 +4,7 @@ FROM php:8.2-apache
 # Menginstal ekstensi mysqli
 RUN docker-php-ext-install mysqli
 
-# Install Composer ke dalam container
+# Install Composer dari image resmi
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Menetapkan ServerName untuk menghilangkan peringatan
@@ -16,11 +16,11 @@ WORKDIR /var/www/html
 # Menyalin semua file dari project lokal ke dalam container
 COPY . /var/www/html
 
-# Pastikan hak akses direktori benar sebelum menjalankan Composer
+# Memastikan hak akses direktori sebelum menjalankan Composer
 RUN chown -R www-data:www-data /var/www/html
 
-# Menjalankan Composer install untuk mengunduh semua dependensi Laravel
-RUN composer install --optimize-autoloader --no-dev --no-scripts --no-progress --prefer-dist
+# Mengunduh semua dependensi Laravel dengan menonaktifkan batas memori
+RUN COMPOSER_MEMORY_LIMIT=-1 composer install --optimize-autoloader --no-dev --no-scripts --no-progress --prefer-dist
 
 # Menyalin direktori 'public' jika perlu, tapi pastikan project Laravel disalin lengkap
 COPY ./public /var/www/html
