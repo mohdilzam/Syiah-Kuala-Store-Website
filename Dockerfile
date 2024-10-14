@@ -1,23 +1,20 @@
-FROM php:8.2.4
+# Menggunakan image PHP resmi dengan Apache
+FROM php:8.2-apache
 
-# Meng-install dependensi PHP menggunakan Composer
-RUN apt-get update && apt-get install -y \
-    libzip-dev \
-    libicu-dev \
-    unzip \
-    && docker-php-ext-install zip \
-    && docker-php-ext-install intl \
-    && docker-php-ext-install pdo pdo_mysql mbstring xml \
-    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+# Menginstal ekstensi mysqli
+RUN docker-php-ext-install mysqli
 
-# Menyalin kode aplikasi ke dalam image
-COPY . /var/www/html
+# Menetapkan direktori kerja di dalam container
 WORKDIR /var/www/html
 
-# Jalankan composer install
-RUN composer install --no-dev --optimize-autoloader
+# Menyalin semua file dari project lokal ke dalam container
+COPY . /var/www/html
 
-# Menambahkan user yang lebih aman
-RUN useradd -ms /bin/bash appuser
-USER appuser
+# Mengatur hak akses folder jika diperlukan
+RUN chown -R www-data:www-data /var/www/html
+
+# Membuka port 80 untuk akses HTTP
+EXPOSE 80
+
+# Menjalankan Apache server di dalam container
+CMD ["apache2-foreground"]
