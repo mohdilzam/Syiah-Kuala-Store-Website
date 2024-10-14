@@ -1,8 +1,11 @@
 # Menggunakan image PHP resmi dengan Apache
-FROM php:8.2-apache
+FROM php:8.3-apache
 
 # Menginstal ekstensi mysqli
 RUN docker-php-ext-install mysqli
+
+# Install Composer ke dalam container
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Menetapkan ServerName untuk menghilangkan peringatan
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
@@ -13,7 +16,10 @@ WORKDIR /var/www/html
 # Menyalin semua file dari project lokal ke dalam container
 COPY . /var/www/html
 
-# Jika menggunakan Laravel, salin direktori 'public' ke direktori kerja Apache
+# Jalankan Composer install untuk mengunduh semua dependensi Laravel
+RUN composer install --optimize-autoloader --no-dev
+
+# Menyalin direktori 'public' jika perlu, tapi pastikan project Laravel disalin lengkap
 COPY ./public /var/www/html
 
 # Mengatur hak akses folder jika diperlukan
