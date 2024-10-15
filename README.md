@@ -2,7 +2,9 @@ SKS (Syiah Kuala Store)
 
 Mata Kuliah Pengembangan dan Operasional Perangkat Lunak
 
-Anggota Kelompok:
+Kelompok 13
+  
+Anggota :
 1. Muhammad Ilzam (2208107010087)
 2. Dinda Maharani (2208107010081)
 
