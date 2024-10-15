@@ -1,5 +1,7 @@
 SKS (Syiah Kuala Store)
 
+Mata Kuliah Pengembangan dan Operasional 
+
 Anggota Kelompok:
 1. Muhammad Ilzam (2208107010087)
 2. Dinda Maharani (2208107010081)
