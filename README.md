@@ -1,6 +1,6 @@
 SKS (Syiah Kuala Store)
 
-Mata Kuliah Pengembangan dan Operasional Perangkat lunak
+Mata Kuliah Pengembangan dan Operasional Perangkat Lunak
 
 Anggota Kelompok:
 1. Muhammad Ilzam (2208107010087)
